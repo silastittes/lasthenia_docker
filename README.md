@@ -1,6 +1,6 @@
 # lasthenia_docker
 
-Container for reproducing results in Grow where you thrive, or where only you can survive? An analysis of performance curve evolution in a clade with diverse habitat affinities."
+Container for reproducing results in, "Grow where you thrive, or where only you can survive? An analysis of performance curve evolution in a clade with diverse habitat affinities."
 
 To use this container (assuming Docker is installed), build the container from DockerHub locally and connect with:
 
