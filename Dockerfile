@@ -11,19 +11,17 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 
 && install2.r --error \
     --deps TRUE \
-    Rcpp \
     lme4 \
-    car \
     rstan \
     truncnorm \
-    scales \ 
+    scales \
     geomorph \
     ape \
     phytools \
     xtable \
-    openxlsx \ 
+    openxlsx \
     abind \
-    glmnet \ 
+    glmnet \
     nlme \
     flextable \
     officer \
@@ -34,8 +32,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     ggridges \
 && R --no-restore --no-save -e 'devtools::install_github("silastittes/performr", local = FALSE, version = 0.1)' \
 && R --no-restore --no-save -e 'devtools::install_github("thomasp85/patchwork")' \
-&& R --no-restore --no-save -e 'devtools::install_github("rmcelreath/rethinking")'
+&& R --no-restore --no-save -e 'devtools::install_github("rmcelreath/rethinking", version = 1.59)'
 
-WORKDIR /
+WORKDIR /home/rstudio
 RUN git clone https://github.com/silastittes/lasthenia_curves.git
 
