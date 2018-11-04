@@ -35,5 +35,5 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 && R --no-restore --no-save -e 'devtools::install_github("rmcelreath/rethinking", version = 1.59)'
 
 WORKDIR /home/rstudio
-RUN git clone https://github.com/silastittes/lasthenia_curves.git
+RUN git clone -b "accepted" https://github.com/silastittes/lasthenia_curves.git
 
